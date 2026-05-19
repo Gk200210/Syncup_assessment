@@ -6,7 +6,7 @@ import { Server } from "socket.io";
 import { pool } from "./db.js";
 import { redisClient } from "./redis.js";
 dotenv.config();
-pool.connect()
+pool.query("SELECT NOW()")
   .then(() => console.log("DB Connected"))
   .catch((err) => console.log(err));
 
