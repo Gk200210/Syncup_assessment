@@ -24,6 +24,11 @@ const io = new Server(server, {
     origin: "*",
   },
 });
+
+app.get("/", (req, res) => {
+  res.send("API Running");
+});
+
 app.get("/feed", async (req, res) => {
   try {
 
